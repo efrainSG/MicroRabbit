@@ -108,7 +108,7 @@ namespace MicroRabbit.Infra.Bus
             }
             catch (Exception ex)
             {
-
+                // temporary ignored.
             }
         }
 
