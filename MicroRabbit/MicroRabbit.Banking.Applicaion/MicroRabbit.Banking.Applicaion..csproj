@@ -5,4 +5,8 @@
     <RootNamespace>MicroRabbit.Banking.Applicaion_</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MicroRabbit.Banking.Domain\MicroRabbit.Banking.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,9 +1,11 @@
-﻿using MicroRabbit.Domain.Core.Bus;
+﻿using MicroRabbit.Banking.Applicaion_.Interfaces;
+using MicroRabbit.Banking.Applicaion_.Services;
+using MicroRabbit.Banking.Data.Context;
+using MicroRabbit.Banking.Data.Repository;
+using MicroRabbit.Banking.Domain.Interfaces;
+using MicroRabbit.Domain.Core.Bus;
 using MicroRabbit.Infra.Bus;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace MicroRabbit.Infra.IoC
 {
@@ -14,7 +16,12 @@ namespace MicroRabbit.Infra.IoC
             // Domain Bus
             services.AddTransient<IEventBus, RabbitMQBus>();
 
+            // Applitacion services
+            services.AddTransient<IAccountService, AccountService>();
 
+            // Data
+            services.AddTransient<IAccountRepository, AccountRepository>();
+            services.AddTransient<BankingDbContext>();
         }
     }
 }

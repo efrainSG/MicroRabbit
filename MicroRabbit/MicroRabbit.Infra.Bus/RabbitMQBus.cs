@@ -68,7 +68,7 @@ namespace MicroRabbit.Infra.Bus
             if (_handlers[eventName].Any(s => s.GetType() == handlerType))
             {
                 throw new ArgumentException($"Handler type {handlerType.Name} already is registered for {eventName}",
-                                            nameof(handlerType));
+                                            nameof(handlerType).ToString());
             }
 
             _handlers[eventName].Add(handlerType);
@@ -106,7 +106,7 @@ namespace MicroRabbit.Infra.Bus
             {
                 await ProcessEvent(eventName, message).ConfigureAwait(false);
             }
-            catch (Exception ex)
+            catch
             {
                 // temporary ignored.
             }
