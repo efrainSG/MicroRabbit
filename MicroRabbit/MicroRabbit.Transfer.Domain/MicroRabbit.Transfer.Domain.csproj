@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="CommandHandlers\TransferCommandHandler.cs" />
+    <Compile Remove="Commands\CreateTransferCommand.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="CommandHandlers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MicroRabbit.Domain.Core\MicroRabbit.Domain.Core.csproj" />
+  </ItemGroup>
+
+</Project>
