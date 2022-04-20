@@ -1,6 +1,6 @@
-﻿namespace MicroRabbit.Banking.Applicaion.Models
+﻿namespace MicroRabbit.MVC.Models.DTO
 {
-    public class AccountTransfer
+    public class TransferDTO
     {
         public int FromAccount { get; set; }
         public int ToAccount { get; set; }
