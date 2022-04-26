@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/MicroRabbit/MicroRabbit.Banking.Data/Migrations
+/MicroRabbit/MicroRabbit.Transfer.Data/Migrations
